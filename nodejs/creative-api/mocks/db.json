@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Creative 1",
+    "imageUrl": "https://example.com/image1.jpg", 
+    "status": "ACTIVE" 
+  },
+  { 
+    "id": 2, 
+    "name": "Creative 2", 
+    "imageUrl": "https://example.com/image2.jpg", 
+    "status": "INACTIVE" 
+  }
+]
