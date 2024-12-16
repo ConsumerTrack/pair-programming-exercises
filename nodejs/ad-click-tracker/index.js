@@ -9,8 +9,7 @@ const DynamoDB = {
     if (TableName === 'AdClicks' && Key.ad_id) {
       return Promise.resolve({
         Item: {
-          ad_id: Key.ad_id,
-          click_count: { N: '0' }, // Initialize with 0 if not found
+          // Create your DynamoDB structure here
         },
       });
     } else {
@@ -22,7 +21,7 @@ const DynamoDB = {
     if (TableName === 'AdClicks' && Key.ad_id) {
       return Promise.resolve({
         Attributes: {
-          click_count: { N: '1' }, // Simulate successful update
+          // Update the count
         },
       });
     } else {
@@ -32,11 +31,11 @@ const DynamoDB = {
 };
 
 const handler = async (event) => {
-  // Fill out the main body of the lambda function
+  // Fill out the main body of the lambda function using the test event below
 };
 
 app.get('/click/:ad_id', (req, res) => {
-  const event = { ad_id: req.params.ad_id };
+  const event = { /* your event payload here */ };
   handler(event)
     .then((response) => res.status(response.statusCode).json(response))
     .catch((error) => res.status(500).json({ error: 'Internal Server Error' }));
